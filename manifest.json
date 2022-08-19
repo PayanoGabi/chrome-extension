@@ -1,0 +1,11 @@
+{
+    "name": "No Siree",
+    "version": "1.0.0",
+    "description": "Block content",
+    "manifest_version": 3,
+    "author": "G.Payano",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "No Siree"
+    }
+}
