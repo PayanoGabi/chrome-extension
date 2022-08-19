@@ -4,8 +4,15 @@
     "description": "Block content",
     "manifest_version": 3,
     "author": "G.Payano",
-    "action":{
-        "default_popup": "index.html",
-        "default_title": "No Siree"
+    "icons":{
+        "128": "/assets/Moo.png",
+        "48": "assets/Moo48.png",
+        "16": "assets/Moo16.png"
+
+       
+    },
+    "browser_action":{
+        "default_icon": "assets/Moo48.png",
+        "default_popup": "popup.html"
     }
 }
