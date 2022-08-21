@@ -1,6 +1,6 @@
-// async function fetchData() {
+async function fetchData() {
 
 
-//     alert('HI')
-// }
-// fetchData();
+    alert('HI')
+}
+fetchData();

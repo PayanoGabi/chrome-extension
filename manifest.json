@@ -5,7 +5,7 @@
     "manifest_version": 3,
     "author": "G.Payano",
     "icons":{
-        "128": "/assets/Moo.png",
+        "128": "assets/Moo.png",
         "48": "assets/Moo48.png",
         "16": "assets/Moo16.png"
 
