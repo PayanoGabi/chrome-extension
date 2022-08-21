@@ -14,5 +14,11 @@
     "action":{
         "default_icon": "assets/Moo48.png",
         "default_popup": "popup.html"
-    }
+    },
+    "host_permissions": [
+        "https://developer.chrome.com/*"
+      ],
+      "permissions": [
+        "activeTab"
+      ]
 }

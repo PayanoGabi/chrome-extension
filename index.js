@@ -1,3 +1,4 @@
 "use strict";
-let sport = 'football';
-let id = 5;
+if (document.location.href.indexOf('google.com') > -1) {
+    console.log('This will always executed.');
+}
