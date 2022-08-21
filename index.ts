@@ -1,3 +1,5 @@
-let sport = 'football';
+if (document.location.href.indexOf('google.com')> -1) 
+{
+    console.log('This will always executed.');
+}
 
-let id = 5;
