@@ -5,14 +5,14 @@
     "manifest_version": 3,
     "author": "G.Payano",
     "icons":{
-        "128": "assets/Moo.png",
-        "48": "assets/Moo48.png",
-        "16": "assets/Moo16.png"
+        "128": "media/Moo.png",
+        "48": "media/Moo48.png",
+        "16": "media/Moo16.png"
 
        
     },
     "action":{
-        "default_icon": "assets/Moo48.png",
+        "default_icon": "media/Moo48.png",
         "default_popup": "popup.html"
     },
     "host_permissions": [
