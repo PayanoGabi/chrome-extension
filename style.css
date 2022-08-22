@@ -35,7 +35,7 @@ hr{
 
 }
 #startTool{
-
+    margin-top: 10px;
     width: 30%;
     height: 20%;
 }
@@ -62,4 +62,7 @@ border-style: solid;
     
     border-width: 10px;
     border-style: solid;
-    }
+}
+#keywordBtn{
+    margin-top: 10px;
+}
