@@ -20,5 +20,6 @@
       ],
       "permissions": [
         "activeTab"
-      ]
+      ],
+      "service_worker": "index.js"
 }
