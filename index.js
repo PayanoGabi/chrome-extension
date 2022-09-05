@@ -12,6 +12,12 @@ function getCurrentTabUrl() {
         var tab = tabs[0];
         var currentHref = tab.url;
         console.log(tab.url);
+        console.log(document);
+        // let strGoogle = new String('google')
+        if (currentHref === null || currentHref === void 0 ? void 0 : currentHref.indexOf('google')) {
+            console.log('truedat');
+        }
     });
 }
 getCurrentTabUrl();
+console.log(chrome.tabs);

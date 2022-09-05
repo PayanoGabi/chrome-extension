@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             chrome.tabs.query(queryInfo, function(tabs) {
               var tab = tabs[0]
               currentHref = tab.url
-              alert(tab.url)
+             // alert(tab.url)
             })
           }
 
