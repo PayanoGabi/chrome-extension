@@ -1,1 +1,1 @@
-console.log('hi oooooo')
+console.log(document.querySelector('[aria-label="Search"]').value)

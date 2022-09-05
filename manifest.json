@@ -12,7 +12,7 @@
        
     },
     "content_scripts": [{
-      "matches":["https://www.google.com/*"],
+      "matches":["https://www.google.com/*","https://www.bing.com/*","https://www.yahoo.com/*"],
       "js":["content.js"]
     }],
 
