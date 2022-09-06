@@ -1,9 +1,30 @@
-// if (document.location.href.indexOf('google.com')> -1) 
-// {
-  console.log('This will always executed.');
-// // }
 
-// import { currentHref } from 'main.js'
+console.log('This is always executed');
+
+const form = document.querySelector("body > section > div.row-One > form") as HTMLFormElement;
+console.log(form)
+
+type wordArr = {
+  keyword: string;
+};
+
+
+const arr: wordArr[] = [];
+
+form.onsubmit = () => {
+  const formData = new FormData(form);
+
+  const text = formData.get('keywords') as string;
+  console.log(text);
+
+ const textWord: wordArr = {keyword:text}
+
+ arr.push(textWord)
+ console.log(arr)
+
+
+  return false; // prevent reload
+};
 
 function getCurrentTabUrl() {
     var queryInfo = {
@@ -23,11 +44,10 @@ function getCurrentTabUrl() {
             console.log('truedat')
 
         }
-
-
-
+        
     })
-  }
+  } 
   getCurrentTabUrl()
+
 
   console.log(chrome.tabs)

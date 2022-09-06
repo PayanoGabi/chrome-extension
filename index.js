@@ -1,8 +1,16 @@
-// if (document.location.href.indexOf('google.com')> -1) 
-// {
-console.log('This will always executed.');
-// // }
-// import { currentHref } from 'main.js'
+console.log('This is always executed');
+var form = document.querySelector("body > section > div.row-One > form");
+console.log(form);
+var arr = [];
+form.onsubmit = function () {
+    var formData = new FormData(form);
+    var text = formData.get('keywords');
+    console.log(text);
+    var textWord = { keyword: text };
+    arr.push(textWord);
+    console.log(arr);
+    return false; // prevent reload
+};
 function getCurrentTabUrl() {
     var queryInfo = {
         active: true,
