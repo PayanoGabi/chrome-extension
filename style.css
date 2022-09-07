@@ -7,6 +7,10 @@ h1,h2,h3,p{
 
 }
 
+::placeholder{
+    font-family: 'Maven Pro', sans-serif;
+}
+
 body{
     
     background-color: #f9f7f7;
