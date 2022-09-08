@@ -2,19 +2,41 @@
 
 var currentDomain = document.location.href;
 
+var localKeys;
+
 
 chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
-    console.log(response)
+    
+    localKeys = response;
+    console.log(localKeys)
+
+   
+
+    var keyDis = Object.values(localKeys)
+    console.log(keyDis)
+
+   var keyd = Object.keys(localKeys)
+   console.log(keyd)
+    
+
+    if(Object.keys(localKeys).indexOf('keyDB')> -1){
+        console.log(keyDis)
+
+    }
+    
 
 })
+//console.log(localKeys)
+
+
+
+
 
 //chrome.runtime.sendMessage('hrllo world'); 
 
 
 function hideKeywordsG(){
     var googleSearchBar = document.querySelector('[aria-label="Search"]')
-
-
       
 }
 function hideKeywordsY(){

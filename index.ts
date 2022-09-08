@@ -9,8 +9,9 @@ const form = document.querySelector("body > section > div.row-One > form") as HT
  var tabID;
 
 
-const message = 'This is a message from the extension'
+// const message = 'This is a message from the extension'
 
+ const message = localStorage;
 
 // send message to active tab
 chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
@@ -49,7 +50,7 @@ form.onsubmit = () => {
   }
 
 
-localStorage.setItem("" + keyIndex + "", text);
+localStorage.setItem("keyDB" + keyIndex + "", text);
 
 return false; // prevent reload
 };

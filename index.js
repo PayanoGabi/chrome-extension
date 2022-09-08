@@ -3,7 +3,8 @@ var form = document.querySelector("body > section > div.row-One > form");
 //console.log(form)
 // will need to check what information is entered in form - for now using sessionStorage
 var tabID;
-var message = 'This is a message from the extension';
+// const message = 'This is a message from the extension'
+var message = localStorage;
 // send message to active tab
 chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     tabs.forEach(function (tab) {
@@ -25,7 +26,7 @@ form.onsubmit = function () {
     for (var i = 0; i < arr.length; i++) {
         keyIndex = [i];
     }
-    localStorage.setItem("" + keyIndex + "", text);
+    localStorage.setItem("keyDB" + keyIndex + "", text);
     return false; // prevent reload
 };
 function getCurrentTabUrl() {
