@@ -8,31 +8,26 @@ var localKeys;
 chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
     
     localKeys = response;
-    console.log(localKeys)
+   // console.log(localKeys)
 
-   
+   Object.entries(localKeys).forEach((item, index) => {
 
-    var keyDis = Object.values(localKeys)
-    console.log(keyDis)
+     
+    //console.log(Object.values(item))
 
-   var keyd = Object.keys(localKeys)
-   console.log(keyd)
-    
+        if(Object.values(item)[0].indexOf("keyDB") > -1){
+            console.log(item[1])
+            console.log(item)
+        }
 
-    if(Object.keys(localKeys).indexOf('keyDB')> -1){
-        console.log(keyDis)
+    })
 
-    }
+
+
+
     
 
 })
-//console.log(localKeys)
-
-
-
-
-
-//chrome.runtime.sendMessage('hrllo world'); 
 
 
 function hideKeywordsG(){
