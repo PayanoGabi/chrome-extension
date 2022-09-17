@@ -27,13 +27,6 @@ chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
           
             //console.log(arr.toString())
 
-
-            // var gooBars = document.querySelector('[aria-label="Search"]');
-
-           // currentValue = document.querySelector('[aria-label="Search"]').value
-
-           // let cloneGS = gooBars.cloneNode(true)
-
             //changing appearance
 
             gooBars.after(cloneGS)
@@ -68,16 +61,3 @@ chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
 
 
 
-//   if(currentDomain.indexOf('yahoo.com')> -1){
-//     console.log('yahoo.com')
-//    var yahooSearchBar = document.querySelector('[role="combobox"]').value;
-//    console.log(yahooSearchBar)
-
-// }
-
-// if(currentDomain.indexOf('bing.com')> -1){
-//     console.log('bing.com')
-//    var bingSearchBar = document.querySelector('[type="search"]').value;
-//    console.log(bingSearchBar)
-
-// }
