@@ -81,20 +81,3 @@ chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
 //    console.log(bingSearchBar)
 
 // }
-
-            // var googleS = document.querySelector('[aria-label="Search"]')
-
-            // let cloneGS = googleS.cloneNode(true)
-            
-            // googleS.after(cloneGS)
-            // cloneGS.id = "cloneInput";
-            // googleS.style.zIndex = "";
-            // cloneGS.style.color = "black"
-            // cloneGS.value = "Tesiiiit";
-            // cloneGS.style.zIndex = "9";
-            // cloneGS.style.position = "absolute";
-            // googleS.style.color = "white" 
-
-            ///next when user clicks on search i need to append the value to the
-
-
