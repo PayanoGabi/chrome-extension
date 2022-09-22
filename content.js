@@ -14,8 +14,6 @@ chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
     var cloneGS = gooBars.cloneNode(true)
 
 
-   // console.log(localKeys)
-
    Object.entries(localKeys).forEach((item, index) => {
        
 
@@ -33,9 +31,11 @@ chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
             cloneGS.id = "cloneInput";
             gooBars.style.zIndex = "";
             cloneGS.style.color = "black";
+            cloneGS.style = "margin: auto;"
             cloneGS.style.zIndex = "10";
             cloneGS.style.position = "absolute";
             gooBars.style.color = "white" 
+
 
             //end
             
@@ -49,7 +49,6 @@ chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
                 }
             })
             
-           
         
         }
         cloneGS.value = currentValue;
