@@ -1,6 +1,26 @@
 
 console.log('This is always executed');
 
+const catBtn = document.getElementById("categorize");
+
+
+function getGroup(){
+  alert("hi")
+  const catMod = document.createElement("div");
+  const catHead = document.createElement("h1")
+  catHead.textContent = "Categories"
+  const exBod = document.getElementsByTagName('body')[0];
+  console.log(exBod)
+  catMod.id="categorizeMod";
+  exBod?.appendChild(catMod);
+  catMod?.appendChild(catHead);
+
+
+}
+
+catBtn?.addEventListener('click', (e:Event) => getGroup())
+
+
 const form = document.querySelector("body > section > div.row-One > form") as HTMLFormElement;
 
 //console.log(form)
@@ -27,7 +47,7 @@ type wordArr = {
 
 };
 
-// creating an array that will contains strings
+// creating an array that will contain strings
 const arr: wordArr[] = [];
 
 
@@ -54,9 +74,6 @@ localStorage.setItem("keyDB" + keyIndex + "", text);
 
 return false; // prevent reload
 };
-
-
-
 
 
 

@@ -70,3 +70,12 @@ border-style: solid;
 #keywordBtn{
     margin-top: 10px;
 }
+
+#categorizeMod {
+    width: 80%;
+    height: 30%;
+    background-color: cadetblue;
+    position: absolute;
+    margin: auto;
+    margin-top: 47%;
+}

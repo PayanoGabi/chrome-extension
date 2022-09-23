@@ -1,4 +1,17 @@
 console.log('This is always executed');
+var catBtn = document.getElementById("categorize");
+function getGroup() {
+    alert("hi");
+    var catMod = document.createElement("div");
+    var catHead = document.createElement("h1");
+    catHead.textContent = "Categories";
+    var exBod = document.getElementsByTagName('body')[0];
+    console.log(exBod);
+    catMod.id = "categorizeMod";
+    exBod === null || exBod === void 0 ? void 0 : exBod.appendChild(catMod);
+    catMod === null || catMod === void 0 ? void 0 : catMod.appendChild(catHead);
+}
+catBtn === null || catBtn === void 0 ? void 0 : catBtn.addEventListener('click', function (e) { return getGroup(); });
 var form = document.querySelector("body > section > div.row-One > form");
 //console.log(form)
 // will need to check what information is entered in form - for now using sessionStorage
@@ -13,7 +26,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         }
     });
 });
-// creating an array that will contains strings
+// creating an array that will contain strings
 var arr = [];
 form.onsubmit = function () {
     var formData = new FormData(form);
