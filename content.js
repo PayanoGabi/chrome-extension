@@ -13,9 +13,10 @@ chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
     var gooBars = document.querySelector('[aria-label="Search"]');
     var cloneGS = gooBars.cloneNode(true)
 
-    window.onload = function (){  
 
    Object.entries(localKeys).forEach((item, index) => {
+       
+
 
         if(Object.values(item)[0].indexOf("keyDB") > -1 && currentDomain.indexOf('google.com')> -1){
           //console.log(item[1])   
@@ -43,6 +44,8 @@ chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
                 if(index === arr.length - 1){ 
                     console.log(i.toString())
                     gooBars.value += i.toString(); 
+
+                    //add fcuntionality to check for duplicates
                     
 
                 }
@@ -54,7 +57,7 @@ chrome.runtime.onMessage.addListener(function(response, sender, sendResponse){
 
 
     })   
-    }
+
 })
 
 
