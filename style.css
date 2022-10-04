@@ -6,6 +6,9 @@ h1,h2,h3,p{
     font-family: 'Maven Pro', sans-serif;
 
 }
+h3{
+    font-size: 19px;
+}
 
 ::placeholder{
     font-family: 'Maven Pro', sans-serif;
@@ -13,7 +16,7 @@ h1,h2,h3,p{
 
 body{
     
-    background-color: #f9f7f7;
+    background-color: #FF9C00;
     display: flex;
     flex-direction: column;
     align-content: center; 
@@ -22,8 +25,9 @@ body{
 
 }
 header{
-    background-color: #ffffff;
-    padding: 15px;
+    background-color: #FF9C00;
+    padding: 0px 12px 0px 12px;
+    
 }
 hr{
    width: 80%;
@@ -32,12 +36,33 @@ hr{
 .top-header{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    margin: 10px;
 
 }
 .top-header > img{
     padding-left: 3px;
+    border-radius: 46%;
 
 }
+img{
+    border-radius: 46%;
+}
+body > header > div.top-header > container {
+    border-radius: 62%;
+    background-color: #FF9C00;
+    padding: 8%;
+}
+
+button {
+    background-color:#BE3118;
+    width: 100%;
+    color: white;
+    box-shadow: 3px 1px grey;
+};
+
+
+
 #startTool{
     margin-top: 10px;
     width: 30%;
@@ -51,21 +76,34 @@ hr{
     padding-top: 10px;
 
 }
+.main-content * {
+   
+        margin: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+}
+
 .row-One{
 border: white;
 background-color: #fcfafa;
-
+padding: 6%;
 box-shadow: 0px 0px 7px #ffffff inset;
 border-width: 10px;
 border-style: solid;
+box-shadow: 10px 10px grey;
 }
 .row-Two{
     border: white;
     box-shadow: 0px 0px 7px #ffffff inset;
     background-color: #fcfafa;
-    
+    padding: 6%;
     border-width: 10px;
     border-style: solid;
+    display: block;
+    box-shadow: 10px 10px grey;
 }
 #keywordBtn{
     margin-top: 10px;
@@ -73,9 +111,29 @@ border-style: solid;
 
 #categorizeMod {
     width: 80%;
-    height: 30%;
-    background-color: cadetblue;
+    height: 68%;
+    background-color: #ffffff;
     position: absolute;
     margin: auto;
     margin-top: 47%;
+    box-shadow: 10px 10px grey;
+}
+ul#myGroups li {
+    border-width: 1px;
+    border-style: solid;
+    list-style: none;
+    height: 45px;
+    padding-left: 0px;
+}
+
+#activeTab{
+padding-bottom: 18%;
+position: absolute;
+height: 85%;
+width: 100%;
+background-color: white;
+}
+
+#myGroups{
+    padding: 0px;
 }

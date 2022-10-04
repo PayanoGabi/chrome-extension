@@ -1,5 +1,5 @@
 {
-    "name": "No Siree",
+    "name": "Moo",
     "version": "1.0.0",
     "description": "Block content",
     "manifest_version": 3,
@@ -27,7 +27,6 @@
       ],
       "permissions": [
         "activeTab"
-      ],
-      "service_worker": "index.js"
+      ]
 }
 

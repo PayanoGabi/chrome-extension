@@ -1,8 +1,54 @@
 
 console.log('This is always executed');
+
+
+  var submitForm = document.getElementById('keyForm') as HTMLFormElement;
+  const btnKey = document.getElementById('keywordBtn') as HTMLElement 
+
+  submitForm?.addEventListener("submit", (e:Event) => listenerFunction());
+
+
+function listenerFunction() {
+ 
+
+  if(submitForm.value = " "){
+
+    var greenSubmitField = '<span id="greenSubmit" style="width: 100%;height: 20%;background-color: green;margin: 0;color: black;">Enter Text</span>';
+    btnKey.style.marginBottom = "0px";
+    submitForm.innerHTML += greenSubmitField;
+    const myTimeout = setTimeout(showBanner, 2000);
+
+
+        function showBanner() {
+          
+          clearTimeout(myTimeout);
+          const greenFields = document.getElementById('greenSubmit') as HTMLStyleElement;
+          greenFields.style.display = "none";
+
+        submitForm.reset()
+       
+
+        }
+
+    // return false;
+
+  }else{
+      
+    var formValue = document.getElementById('blockContent') as HTMLFormElement;
+    formValue.value = ""; 
+    var greenSubmitField = '<span id="greenSubmit" style="width: 100%;height: 20%;background-color: green;margin: 0;color: black;">Thank You</span>';
+
+
+    btnKey.style.marginBottom = "0px";
+    submitForm.innerHTML += greenSubmitField;
+  }
+}
+
+
+
 var startBtn = document.querySelector('#startTool')
 
-startBtn?.addEventListener('click', (e:Event) => hidekeys())
+//startBtn?.addEventListener('click', (e:Event) => hidekeys())
 
 
 const catBtn = document.getElementById("categorize");
@@ -11,13 +57,17 @@ const catBtn = document.getElementById("categorize");
 function getGroup(){
   const catMod = document.createElement("div");
   const catHead = document.createElement("h1")
+  var catHTML = '<button>Add New</button><button>Delete</button>';
+  var catGroups = '<ul id="myGroups"><li>Technology</li><li>Job Search</li><li>Fashion</li><li>Recipe</li><li>Pop Culture</li></ul>'
   const catClose = document.createElement("button")
   catClose.textContent = "X";
-  catHead.textContent = "Categories"
+  catHead.textContent = "Folders";
+  catMod.innerHTML += catHTML;
   const exBod = document.getElementsByTagName('body')[0];
   console.log(exBod)
   catMod.id="categorizeMod";
   exBod?.appendChild(catMod);
+  catMod.innerHTML += catGroups;
 
   catMod?.appendChild(catClose)
   catMod?.appendChild(catHead);
@@ -36,22 +86,41 @@ catBtn?.addEventListener('click', (e:Event) => getGroup())
 
 
 
+document.querySelectorAll("#myGroups > li").forEach(function(i, index){
 
 
-function hidekeys(){
+  i?.addEventListener("onmouseover", (e:Event) => hoverFolder())
+
+  function hoverFolder(){
+
+  //i.id = "activeTab" 
+   console.log('over')
+  }
+  i?.addEventListener("onmouseout", (e:Event) => overFolder())
+
+
+  function overFolder(){
+
+
+     console.log('out')
+    }
+  
+})
+
+
+
+//function hidekeys(){
 
 
   const form = document.querySelector("body > section > div.row-One > form") as HTMLFormElement;
 
-  //console.log(form)
-  // will need to check what information is entered in form - for now using sessionStorage
 
   var tabID;
 
 
-  // const message = 'This is a message from the extension'
+  const message = localStorage; // This is a message from the extension
 
-  const message = localStorage;
+  
 
   // send message to active tab
   chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
@@ -150,4 +219,4 @@ function hidekeys(){
 
   // });
 
-}
+////}
